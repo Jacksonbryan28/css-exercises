@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
+  /* copied into .section to try to fix. center makes head and footer smaller 
+
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+*/
 }
 
 img {
@@ -16,6 +25,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+
+  padding: 8px;
 }
 
 input {
@@ -23,4 +34,57 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/*removes styling from unordered lists*/
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*styling links*/
+a {
+  text-decoration: none;
+  color: gray;
+  margin: 8px;
+}
+
+/*styles header and footer spacing */
+.header,
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+/*adds background to footer*/
+.footer {
+  background-color: #eee;
+}
+
+.left-links {
+  display: flex;
+}
+
+.right-links {
+  display: flex;
+}
+
+/*column flex that separates heading, middle section, and footer*/
+
+.section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
